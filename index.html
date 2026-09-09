@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,viewport-fit=cover,user-scalable=no">
+<title>Books</title>
+<style>
+*{box-sizing:border-box}
+html,body{margin:0;width:100%;height:100%;overflow:hidden;background:#000}
+#app{position:fixed;inset:0;overflow:hidden;background:#000}
+#photo{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;display:block;user-select:none;-webkit-user-drag:none}
+#gl{position:absolute;inset:0;width:100%;height:100%;display:block;z-index:2;touch-action:none}
+#veil{position:absolute;inset:0;background:rgba(0,0,0,.68);opacity:0;pointer-events:none;z-index:3;transition:opacity .42s ease}
+#veil.on{opacity:1}
+#copy{position:absolute;z-index:5;left:55%;right:6%;top:50%;transform:translate(28px,-50%);opacity:0;pointer-events:none;color:#f4f0e8;transition:opacity .42s ease,transform .55s cubic-bezier(.2,.82,.18,1)}
+#copy.on{opacity:1;transform:translate(0,-50%)}
+#copy .k{font:11px ui-monospace,SFMono-Regular,Menlo,monospace;letter-spacing:.14em;color:#aaa;margin-bottom:15px}
+#copy h1{font:400 clamp(38px,5vw,74px)/.94 Georgia,"Times New Roman",serif;margin:0 0 14px}
+#copy .a{font:13px ui-monospace,SFMono-Regular,Menlo,monospace;color:#cbc5bb;margin-bottom:24px}
+#copy p{font:18px/1.5 Georgia,"Times New Roman",serif;color:#ddd7ce;max-width:620px;margin:0}
+#close{position:absolute;z-index:6;right:18px;top:calc(env(safe-area-inset-top) + 18px);width:44px;height:44px;border-radius:50%;border:1px solid rgba(255,255,255,.36);background:rgba(0,0,0,.28);color:#fff;font-size:26px;display:none}
+#close.on{display:block}
+@media(max-width:720px){
+ #copy{left:18px;right:18px;top:auto;bottom:5vh;transform:translateY(18px)}
+ #copy.on{transform:none}
+ #copy h1{font-size:38px}
+ #copy p{font-size:15px;line-height:1.45;max-height:17vh;overflow:auto}
+}
+</style>
+<script type="importmap">
+{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.180.0/build/three.module.js"}}
+</script>
+</head>
+<body>
+<div id="app">
+  <img id="photo" alt="">
+  <canvas id="gl"></canvas>
+  <div id="veil"></div>
+  <div id="copy">
+    <div class="k">BOOK</div>
+    <h1 id="title"></h1>
+    <div class="a" id="author"></div>
+    <p id="text">Текст для этой книги будет добавлен позже.</p>
+  </div>
+  <button id="close" aria-label="Закрыть">×</button>
+</div>
+<script type="module" src="./main.js"></script>
+</body>
+</html>
