@@ -1,0 +1,8 @@
+[
+  {"id":"antigona","title":"Antígona · Electra","author":"Sófocles","x":7.2,"y":9.0,"w":9.8,"h":84.0,"color":"#151515"},
+  {"id":"yellow","title":"Книга 2","author":"","x":16.2,"y":9.0,"w":8.5,"h":84.0,"color":"#d9ad12"},
+  {"id":"poeta","title":"Poeta en Nueva York","author":"Federico García Lorca","x":23.2,"y":11.0,"w":17.0,"h":81.0,"color":"#d8c997"},
+  {"id":"vida","title":"La vida es sueño","author":"Pedro Calderón de la Barca","x":39.0,"y":24.0,"w":9.2,"h":66.0,"color":"#111111"},
+  {"id":"capricornio","title":"Capricornio","author":"Helene Knauer Saltarini","x":47.0,"y":25.0,"w":10.2,"h":65.0,"color":"#315d3e"},
+  {"id":"hamlet","title":"Hamlet","author":"William Shakespeare","x":56.0,"y":15.0,"w":22.0,"h":73.0,"color":"#d8c9aa"}
+]
