@@ -1,4 +1,7 @@
 import * as THREE from 'three';
+import { PHOTO } from './assets/photo-data.js';
+
+document.querySelector('#photo').src = PHOTO;
 
 const canvas = document.querySelector('#gl');
 const veil = document.querySelector('#veil');
